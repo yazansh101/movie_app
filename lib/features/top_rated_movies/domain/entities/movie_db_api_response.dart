@@ -5,7 +5,7 @@ import 'package:yazan_movie_db_task/features/top_rated_movies/domain/entities/to
 import '../../../../core/mapper/mapper.dart';
 
 class MoveiDbResponseEntity extends Equatable {
-  @JsonKey(name: MoveiDbResponseKey.page, fromJson: Mapper.objectToString)
+  @JsonKey(name: MoveiDbResponseKey.page, fromJson: Mapper.objectToInt)
   final int page;
 
   @JsonKey(name: MoveiDbResponseKey.totalResults)

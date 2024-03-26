@@ -22,7 +22,7 @@ class MovieEntity extends Equatable {
   @JsonKey(name: MoveiKey.posterPath, fromJson: Mapper.objectToString)
   final String posterPath;
   @JsonKey(name: MoveiKey.releaseDate, fromJson: Mapper.objectToString)
-  final DateTime releaseDate;
+  final String releaseDate;
   @JsonKey(name: MoveiKey.title, fromJson: Mapper.objectToString)
   final String title;
   @JsonKey(name: MoveiKey.video, fromJson: Mapper.objectToBool)
