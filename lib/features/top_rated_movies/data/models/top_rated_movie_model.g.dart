@@ -8,37 +8,38 @@ part of 'top_rated_movie_model.dart';
 
 MovieModel _$MovieModelFromJson(Map<String, dynamic> json) => MovieModel(
       adult: Mapper.objectToBool(json['adult']),
-      backdropPath: Mapper.objectToString(json['backdropPath']),
-      genreIds:
-          (json['genreIds'] as List<dynamic>?)?.map((e) => e as int).toList() ??
-              [],
+      backdropPath: Mapper.objectToString(json['backdrop_path']),
+      genreIds: (json['genre_ids'] as List<dynamic>?)
+              ?.map((e) => e as int)
+              .toList() ??
+          [],
       id: Mapper.objectToInt(json['id']),
-      originalLanguage: Mapper.objectToString(json['originalLanguage']),
-      originalTitle: Mapper.objectToString(json['originalTitle']),
+      originalLanguage: Mapper.objectToString(json['original_language']),
+      originalTitle: Mapper.objectToString(json['original_title']),
       overview: Mapper.objectToString(json['overview']),
       popularity: Mapper.objectToDouble(json['popularity']),
-      posterPath: Mapper.objectToString(json['posterPath']),
-      releaseDate: Mapper.objectToString(json['releaseDate']),
+      posterPath: Mapper.objectToString(json['poster_path']),
+      releaseDate: Mapper.objectToString(json['release_date']),
       title: Mapper.objectToString(json['title']),
       video: Mapper.objectToBool(json['video']),
-      voteAverage: Mapper.objectToDouble(json['voteAverage']),
-      voteCount: Mapper.objectToInt(json['voteCount']),
+      voteAverage: Mapper.objectToDouble(json['vote_average']),
+      voteCount: Mapper.objectToInt(json['vote_count']),
     );
 
 Map<String, dynamic> _$MovieModelToJson(MovieModel instance) =>
     <String, dynamic>{
       'adult': instance.adult,
-      'backdropPath': instance.backdropPath,
-      'genreIds': instance.genreIds,
+      'backdrop_path': instance.backdropPath,
+      'genre_ids': instance.genreIds,
       'id': instance.id,
-      'originalLanguage': instance.originalLanguage,
-      'originalTitle': instance.originalTitle,
+      'original_language': instance.originalLanguage,
+      'original_title': instance.originalTitle,
       'overview': instance.overview,
       'popularity': instance.popularity,
-      'posterPath': instance.posterPath,
-      'releaseDate': instance.releaseDate,
+      'poster_path': instance.posterPath,
+      'release_date': instance.releaseDate,
       'title': instance.title,
       'video': instance.video,
-      'voteAverage': instance.voteAverage,
-      'voteCount': instance.voteCount,
+      'vote_average': instance.voteAverage,
+      'vote_count': instance.voteCount,
     };

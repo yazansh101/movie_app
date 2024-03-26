@@ -6,7 +6,7 @@ import 'package:yazan_movie_db_task/features/top_rated_movies/domain/entities/mo
 
 part 'movie_db_response_model.g.dart';
 
-@JsonSerializable(converters: [ConvertFromJsonToMovie()])
+@JsonSerializable(includeIfNull: true, checked: true,converters: [ConvertFromJsonToMovie()])
 class MovieDbResponseModel extends MoveiDbResponseEntity implements Model {
   const MovieDbResponseModel(
       {required super.page,
