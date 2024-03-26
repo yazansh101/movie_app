@@ -70,17 +70,17 @@ class MovieEntity extends Equatable {
 
 class MoveiKey {
   static const String adult = "adult";
-  static const String backdropPath = "backdropPath";
-  static const String genreIds = "genreIds";
+  static const String backdropPath = "backdrop_path";
+  static const String genreIds = "genre_ids";
   static const String id = "id";
-  static const String originalLanguage = "originalLanguage";
-  static const String originalTitle = "originalTitle";
+  static const String originalLanguage = "original_language";
+  static const String originalTitle = "original_title";
   static const String overview = "overview";
   static const String popularity = "popularity";
-  static const String posterPath = "posterPath";
-  static const String releaseDate = "releaseDate";
+  static const String posterPath = "poster_path";
+  static const String releaseDate = "release_date";
   static const String title = "title";
   static const String video = "video";
-  static const String voteAverage = "voteAverage";
-  static const String voteCount = "voteCount";
+  static const String voteAverage = "vote_average";
+  static const String voteCount = "vote_count";
 }

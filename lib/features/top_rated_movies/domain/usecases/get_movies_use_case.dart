@@ -9,6 +9,6 @@ class GetTopRatedMoviesUseCase {
 
   GetTopRatedMoviesUseCase(this.repository);
 
-  Future<Either<Failure, List<MoveiDbResponseEntity >>> call(int page) async =>
+  Future<Either<Failure, MoveiDbResponseEntity>> call(int page) async =>
       await repository.getTopRatedMovies(page);
 }

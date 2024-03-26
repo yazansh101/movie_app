@@ -8,8 +8,8 @@ class MoveiDbResponseEntity extends Equatable {
   @JsonKey(name: MoveiDbResponseKey.page, fromJson: Mapper.objectToInt)
   final int page;
 
-  @JsonKey(name: MoveiDbResponseKey.totalResults)
-  final int totalResults;
+  @JsonKey(name: MoveiDbResponseKey.totalResults,fromJson: Mapper.objectToInt)
+  final int? totalResults;
   @JsonKey(name: MoveiDbResponseKey.totalPages, fromJson: Mapper.objectToInt)
   final int totalPages;
 
@@ -27,7 +27,7 @@ class MoveiDbResponseEntity extends Equatable {
   List<Object> get props => [
         page,
         totalPages,
-        totalResults,
+        totalResults ?? 0,
         movies,
       ];
 }
@@ -36,5 +36,5 @@ class MoveiDbResponseKey {
   static const String page = "page";
   static const String movies = "results";
   static const String totalPages = "total_pages";
-  static const String totalResults = "totalResults";
+  static const String totalResults = "total_results";
 }
