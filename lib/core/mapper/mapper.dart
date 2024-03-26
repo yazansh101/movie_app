@@ -20,13 +20,16 @@ abstract class _Mapper{
 
 class Mapper extends _Mapper{
   @override
-  T mapFromJson<T extends Model>(Map<String, dynamic> json,T Function(Map<String , dynamic> json) toModel) {
-      try {
-        Map<String , dynamic > convertedJson = json['data']??{};
-       return toModel(convertedJson);
-      } catch (e) {
-        throw MappingToModelException(message: ExceptionCode.MAPPING.extractMessage, code:ExceptionCode.MAPPING);
-      }
+  T mapFromJson<T extends Model>(Map<String, dynamic> json,
+      T Function(Map<String, dynamic> json) toModel) {
+    try {
+      Map<String, dynamic> convertedJson = json;
+      return toModel(convertedJson);
+    } catch (e) {
+      throw MappingToModelException(
+          message: ExceptionCode.MAPPING.extractMessage,
+          code: ExceptionCode.MAPPING);
+    }
   }
 
 
