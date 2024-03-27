@@ -16,7 +16,8 @@ MovieDbResponseModel _$MovieDbResponseModelFromJson(
           page: $checkedConvert('page', (v) => Mapper.objectToInt(v)),
           totalPages:
               $checkedConvert('total_pages', (v) => Mapper.objectToInt(v)),
-          totalResults: $checkedConvert('total_results', (v) => v as int?),
+          totalResults:
+              $checkedConvert('total_results', (v) => Mapper.objectToInt(v)),
           movies: $checkedConvert(
               'results',
               (v) =>
@@ -29,7 +30,6 @@ MovieDbResponseModel _$MovieDbResponseModelFromJson(
         return val;
       },
       fieldKeyMap: const {
-        'page' : 'page',
         'totalPages': 'total_pages',
         'totalResults': 'total_results',
         'movies': 'results'

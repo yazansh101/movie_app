@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 
 class ApiURL {
   static const String baseURL = "https://api.themoviedb.org/3/movie";
+  static const String storageURL = "http://image.tmdb.org/t/p/w500/";
   static const String topMovieRated = "$baseURL/top_rated";
 }
 
